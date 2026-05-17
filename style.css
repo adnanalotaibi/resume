@@ -1,108 +1,211 @@
-:root{
-  --bg:#0f1720;
-  --panel:#111214;
-  --muted:#9aa3ae;
-  --accent:#1f2937;
-  --accent-2:#2b3440;
-  --text:#e6eef6;
-  --card:#0b0d0f;
-  --radius:10px;
-  font-size:16px;
+:root {
+  /* Elegant Obsidian & Deep Navy Palette */
+  --bg: #0a0f14;
+  --panel: #11161d;
+  --text: #f0f4f8;
+  --muted: #a0aec0;
+  
+  /* Rich Glass/Metallic Gradients */
+  --card-gradient: linear-gradient(135deg, #161f2b, #101721);
+  --accent-gradient: linear-gradient(90deg, #3b82f6, #60a5fa);
+  --border-color: rgba(255, 255, 255, 0.05);
+  
+  --radius: 12px;
+  font-size: 16px;
 }
-*{box-sizing:border-box}
-body{
-  margin:0;
-  font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-  background:linear-gradient(180deg,var(--bg),#061018);
-  color:var(--text);
-  -webkit-font-smoothing:antialiased;
-  -moz-osx-font-smoothing:grayscale;
-}
-.container{
-  display:flex;
-  gap:28px;
-  padding:36px;
-  max-width:1100px;
-  margin:18px auto;
-}
-.sidebar{
-  width:300px;
-  display:flex;
-  flex-direction:column;
-  gap:16px;
-}
-.card{
-  background:linear-gradient(180deg,var(--accent-2),var(--accent));
-  padding:18px;
-  border-radius:var(--radius);
-  box-shadow:0 6px 18px rgba(0,0,0,0.6);
-}
-.heading h1{
-  margin:0;
-  font-size:20px;
-  letter-spacing:0.4px;
-}
-.heading .sub{
-  margin:6px 0 0;
-  color:var(--muted);
-  font-size:13px;
-}
-.contact a{color:#9fc5ff;text-decoration:none}
-.contact p{margin:6px 0;color:var(--muted);font-size:13px}
 
-.skills ul, .experience ul, .certifications ul, .additional ul{
-  margin:8px 0 0 0;
-  padding-left:18px;
-  color:var(--muted);
+* { 
+  box-sizing: border-box; 
+  transition: all 0.25s ease; /* Smooth elegant transitions for everything */
 }
-.software p{color:var(--muted);font-size:13px;margin:0}
 
-.education p{color:var(--muted);font-size:13px;margin:6px 0}
-
-.languages p{color:var(--muted);font-size:13px;margin:6px 0}
-
-.small{font-size:12px;color:var(--muted)}
-
-.content{
-  flex:1;
-  display:flex;
-  flex-direction:column;
-  gap:16px;
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background: radial-gradient(circle at top right, #111a24, var(--bg));
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
 }
-.content .card{padding:22px}
 
-.profile p{color:var(--muted);line-height:1.5;margin:8px 0 0}
-
-.experience h2, .projects h2, .certifications h2, .profile h2, .additional h2{
-  margin:0 0 8px 0;
-  font-size:16px;
-  letter-spacing:0.6px;
+.container {
+  display: flex;
+  gap: 32px;
+  padding: 40px;
+  max-width: 1140px;
+  margin: 24px auto;
 }
-.job{margin-top:12px;border-top:1px solid rgba(255,255,255,0.03);padding-top:12px}
-.job-header{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
-.job-header h3{margin:0;font-size:15px}
-.job-header .date{margin-left:auto;color:var(--muted);font-size:13px}
-.job-header .location{color:var(--muted);font-size:13px}
 
-.job ul{color:var(--muted);padding-left:18px;margin:8px 0 0}
-
-.projects .project-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:12px;
-  margin-top:10px;
+.sidebar {
+  width: 310px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
-.project{
-  background:rgba(255,255,255,0.02);
-  padding:12px;
-  border-radius:8px;
-  border:1px solid rgba(255,255,255,0.03);
-}
-.project h4{margin:0;font-size:14px}
-.project .meta{color:var(--muted);font-size:12px;margin:6px 0}
-.project p{color:var(--muted);font-size:13px;margin:0}
 
-@media (max-width:900px){
-  .container{padding:16px;flex-direction:column}
-  .sidebar{width:100%}
+.card {
+  background: var(--card-gradient);
+  padding: 22px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Typography Enhancements */
+.heading h1 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.heading .sub {
+  margin: 6px 0 0;
+  color: #60a5fa;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.contact a { 
+  color: #60a5fa; 
+  text-decoration: none; 
+  border-bottom: 1px solid transparent;
+}
+.contact a:hover { 
+  border-bottom: 1px solid #60a5fa; 
+}
+
+.contact p { margin: 8px 0; color: var(--muted); font-size: 13.5px; }
+
+/* Elegant Bullet Points */
+.skills ul, .experience ul, .certifications ul, .additional ul {
+  margin: 10px 0 0 0;
+  padding-left: 18px;
+  color: var(--muted);
+}
+
+.skills li, .job li, .certifications li, .additional li {
+  margin-bottom: 6px;
+  font-size: 13.5px;
+}
+
+.software p { 
+  color: #e2e8f0; 
+  font-size: 13.5px; 
+  margin: 0; 
+  line-height: 1.8; 
+  letter-spacing: 0.3px;
+}
+
+.education p { color: var(--muted); font-size: 13.5px; margin: 10px 0; }
+.education strong { color: var(--text); }
+
+.languages p { color: var(--muted); font-size: 13.5px; margin: 8px 0; }
+
+.small { font-size: 12px; color: var(--muted); text-align: center; }
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.content .card { padding: 28px; }
+
+.profile p { color: var(--muted); font-size: 14.5px; line-height: 1.6; margin: 10px 0 0; }
+
+/* Section Headers styling */
+.experience h2, .projects h2, .certifications h2, .profile h2, .additional h2 {
+  margin: 0 0 14px 0;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #f8fafc;
+  position: relative;
+  display: inline-block;
+}
+
+/* Subtle line under section headers */
+.experience h2::after, .projects h2::after, .certifications h2::after, .profile h2::after, .additional h2::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 30px;
+  height: 2px;
+  background: var(--accent-gradient);
+  border-radius: 2px;
+}
+
+.job { margin-top: 16px; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 16px; }
+.job:first-of-type { border-top: none; padding-top: 0; margin-top: 8px; }
+
+.job-header { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+.job-header h3 { margin: 0; font-size: 16px; font-weight: 600; color: #f1f5f9; }
+.job-header .date { margin-left: auto; color: #60a5fa; font-size: 13px; font-weight: 500; }
+.job-header .location { color: var(--muted); font-size: 13px; }
+
+.job ul { color: var(--muted); padding-left: 18px; margin: 10px 0 0; }
+
+/* Interactive Projects Grid */
+.projects .project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+  margin-top: 14px;
+}
+
+.project {
+  background: rgba(255, 255, 255, 0.02);
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+/* Elegant Hover Effect for Desktop Viewing */
+.project:hover {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(96, 165, 250, 0.3);
+  transform: translateY(-2px);
+}
+
+.project h4 { margin: 0; font-size: 14px; font-weight: 600; color: #f1f5f9; }
+.project .meta { color: #60a5fa; font-size: 11px; font-weight: 600; margin: 6px 0 10px 0; letter-spacing: 0.5px; }
+.project p { color: var(--muted); font-size: 12.5px; line-height: 1.5; margin: 0; }
+
+@media (max-width: 900px) {
+  .container { padding: 20px; flex-direction: column; }
+  .sidebar { width: 100%; }
+}
+
+/* Flawless layout controls for generating the PDF */
+@media print {
+  body { 
+    background: #0a0f14 !important; 
+    -webkit-print-color-adjust: exact; 
+    print-color-adjust: exact; 
+  }
+  .container { margin: 0; padding: 10px; gap: 20px; }
+  .card { 
+    box-shadow: none !important; 
+    background: linear-gradient(135deg, #161f2b, #101721) !important; 
+    border: 1px solid rgba(255,255,255,0.05) !important;
+  }
+  .project { 
+    background: rgba(255, 255, 255, 0.02) !important; 
+    border: 1px solid rgba(255, 255, 255, 0.04) !important;
+  }
+  .heading h1 {
+    background: none !important;
+    color: #60a5fa !important;
+    -webkit-text-fill-color: #60a5fa !important;
+  }
 }
